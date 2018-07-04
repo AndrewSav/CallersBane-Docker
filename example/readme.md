@@ -7,7 +7,7 @@ This `docker-compose.yml` requires that a mysql data volume is mounted to /var/l
 
 These folders are assumed to contain the correct data already. To initialize the data you can use the [init script](../init).
 
-Review docker compose and make sure to update `SERVER_ID`. This is the server id that is stored in mysql servers table. It is passed to the Caller's Bane executable command line and must match what is in the database, or the server won't start.
+Review `docker-compose.yml` and make sure to update `SERVER_ID`. This is the server id that is stored in mysql servers table. It is passed to the Caller's Bane executable command line and must match what is in the database, or the server won't start.
 
 Run with:
 
