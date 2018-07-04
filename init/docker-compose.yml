@@ -7,6 +7,7 @@ services:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
     volumes:
     - /c/mnt/docker/callersbane/mysql:/var/lib/mysql
+    command: --sql-mode=NO_ENGINE_SUBSTITUTION
   init:
     build: .
     environment:
