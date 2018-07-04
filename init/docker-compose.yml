@@ -1,0 +1,20 @@
+version: '2'
+services:
+  mysql:
+    image: mysql:5.7.22
+    container_name: init_mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    volumes:
+    - /c/mnt/docker/callersbane/mysql:/var/lib/mysql
+  init:
+    build: .
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      IP_ADDRESS: ${IP_ADDRESS}
+      SERVER_NAME: ${SERVER_NAME}
+      SERVER_ID: ${SERVER_ID}
+      MYSQL_SERVER: ${MYSQL_SERVER}
+    volumes:
+    - /c/mnt/docker/callersbane/conf:/data
+    - /var/run/docker.sock:/var/run/docker.sock
