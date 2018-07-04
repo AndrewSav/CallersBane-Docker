@@ -6,11 +6,11 @@ There is a `docker-compose.yml` in the [example folder](../example) which brings
 - init.ps1 - same as above but for Windows
 - Dockerfile - a temporary container to perform data initialization
 - entry.sh - the shell script that runs in the temporary container and initializes the data
-- docker-compose.yml - descrives the temporary container and mysql container composition required for data intialization
+- docker-compose.yml - describes the temporary container and mysql container composition required for data initialization
 
 Feel free to edit any and all of these files. They assume that your data will be located in `c:\mnt\docker\callersbane` on windows or in `/c/mnt/docker/callersbane` on Linux. Before you start please modify `init.sh` or `init.ps1` depending on where you are running it on, Window or Linux.
 
-- MYSQL_ROOT_PASSWORD - generate a strong mysql password and specify it here. The mysql data will be initialized with this password and the same password will be written into `hibernate.cfg.xml` for use by Caller's Bane container. Note, that you might want to refrain from using special characters in the password, as they could interfer with serach and replace script. Characters like `/\"'&*` are especially problematic, do not use these.
+- MYSQL_ROOT_PASSWORD - generate a strong mysql password and specify it here. The mysql data will be initialized with this password and the same password will be written into `hibernate.cfg.xml` for use by Caller's Bane container. Note, that you might want to refrain from using special characters in the password, as they could interfer with search and replace script. Characters like `/\"'&*` are especially problematic, do not use these. Same applies to other variables below too.
 - IP_ADDRESS - for some reason related to docker in some configuration 127.0.0.1 does not work. Change it to the actual IP address, even if you are running locally. This value goes to the `server` table in mysql, and this is the address the Caller's Bane client used to connect to the server after initial connection to the lobby. This assumes single server setup where both lobby and the server roles are fulfilled by the same Caller's Bane server instance.
 - SERVER_NAME - this is in-game server name such as "My kewl server". It goes to the server table in mysql
 - SERVER_ID - this is server id that corresponds to the name above, e.g. "kewl-server". Goes to the same mysql table.
@@ -18,7 +18,7 @@ Feel free to edit any and all of these files. They assume that your data will be
 
 Once you edited either `init.sh` or `init.ps1` make sure that `/c/mnt/docker/callersbane` folder as described above does not exist. If it exists it means that you already have Caller's Bane server data and you need to be very sure you want to delete them because once you do - you lost them. One way or another make sure that the folder does not exist before running the init.
 
-I tested this both on Linux and Windows, but on Windows I had to do some work-around for [quirks introduced in the latest version](https://github.com/docker/for-win/issues/1829). I tested with version `18.03.1-ce-win65 (17513)` so your milage may vary. Linux is usually much more predictable in that regard.
+I tested this both on Linux and Windows, but on Windows I had to do some work-around for [quirks introduced in the latest version](https://github.com/docker/for-win/issues/1829). I tested with version `18.03.1-ce-win65 (17513)` so your mileage may vary. Linux is usually much more predictable in that regard.
 
 This is what the script does:
 
