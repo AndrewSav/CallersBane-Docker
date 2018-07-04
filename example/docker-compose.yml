@@ -5,6 +5,7 @@ services:
     image: mysql:5.7.22
     volumes:
     - /c/mnt/docker/callersbane/mysql:/var/lib/mysql
+    command: --sql-mode=NO_ENGINE_SUBSTITUTION
   callersbane:
     restart: always
     image: andrewsav/callersbane
