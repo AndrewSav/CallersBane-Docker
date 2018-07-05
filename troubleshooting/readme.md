@@ -69,7 +69,7 @@ Apparently, Caller's bane server uses [logback](https://logback.qos.ch/manual/co
 
 ## Quick way to stand up local mysql server docker container for testing with local Caller's Bane server.
 
-If you are on Windows, make sure you are in `cmd.exe` not in `powershell` and pre-create the data directory for mysql data volume. If you are reusing an existing directory from a previous attempt (windows or linux), be mindful, that the root password will be the one that you specified last time around, not the one that you will pass to docker container now.
+If you are on Windows, make sure you are in `cmd.exe` not in `powershell`, since redirection operator `<` does not work properly in powershell, and pre-create the data directory for mysql data volume. If you are reusing an existing directory from a previous attempt (windows or linux), be mindful, that the root password will be the one that you specified last time around, not the one that you will pass to docker container now.
 
 ```cmd
 mkdir "C:/mnt/docker/callersbane/mysql"
