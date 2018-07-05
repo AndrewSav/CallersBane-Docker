@@ -61,7 +61,7 @@ As the last link above suggests, Black Market prices may be problematic with thi
 
 ## Other issues
 
-There is a bug tracker [here]. User aronnie on [discord](https://discord.gg/QKGmvZh) mentioned on 5th of July 201 that he is part of the former dev team for Scrolls, and that all these issue on this bug tracker are going to be addressed in a few weeks time.
+There is a bug tracker [here](https://github.com/WakingStones/CallersBane-Issues/issues). User aronnie on [discord](https://discord.gg/QKGmvZh) mentioned on 5th of July 201 that he is part of the former dev team for Scrolls, and that all these issue on this bug tracker are going to be addressed in a few weeks time.
 
 ## Additional troubleshooting
 
