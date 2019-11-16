@@ -18,8 +18,8 @@ then
     exit
 fi
 
-if [ -d /mnt/docker/callersbane ]; then
-    echo "It appears that callersbane directories are already set up. Please remove /mnt/docker/callersbane if you want to delete all data, then re-run this script"
+if [ -d /c/mnt/docker/callersbane ]; then
+    echo "It appears that callersbane directories are already set up. Please remove /c/mnt/docker/callersbane if you want to delete all data, then re-run this script"
     exit
 fi
 
